@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            height: 100px;
+            background-color: red;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        
+        .footer {
+            height: 100px;
+            border-radius: 20px;
+            margin: 10px;
+            background-color: blue;
+        }
+        
+        .Father {
+            padding: 10px;
+            height: 400px;
+            display: flex;
+        }
+        
+        .Son1 {
+            width: 20%;
+            height: 100%;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: green;
+        }
+        
+        .Son2 {
+            width: 60%;
+            height: 100%;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: palevioletred;
+        }
+        
+        .Son3 {
+            width: 20%;
+            height: 100%;
+            margin: 10px;
+            border-radius: 20px;
+            background-color: aqua;
+        }
+        
+        @media(max-width:768px) {
+            .Father {
+                padding: 0;
+                margin: 10px;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .Son {
+                height: 150px;
+                width: 100%;
+                margin: 5px 0px;
+            }
+            .Son1 {
+                order: 3;
+            }
+            .Son3 {
+                order: 1;
+            }
+            .Son2 {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div class="Father">
+        <div class="Son Son1"></div>
+        <div class="Son Son2"></div>
+        <div class="Son Son3"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+
+</html>
